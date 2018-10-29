@@ -1,7 +1,9 @@
+const siteMetadata = {
+  title: 'Graph Pod Gatsby'
+}
+
 module.exports = {
-  siteMetadata: {
-    title: 'Gatsby Default Starter'
-  },
+  siteMetadata: siteMetadata,
   plugins: [
     'gatsby-plugin-react-helmet',
     {
