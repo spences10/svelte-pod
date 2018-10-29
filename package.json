@@ -17,19 +17,22 @@
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0"
   },
+  "devDependencies": {
+    "prettier": "^1.14.3",
+    "pretty-quick": "^1.8.0"
+  },
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "dev": "gatsby develop --verbose --p 9000",
-    "format": "prettier --write \"src/**/*.js\"",
+    "dev": "gatsby develop --verbose --p 8800",
+    "format": "pretty-quick",
+    "precommit": "pretty-quick --staged",
+    "serve": "gatsby serve -9000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "prettier": "^1.14.2"
-  },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/spences10/graph-pod-gatsby"
