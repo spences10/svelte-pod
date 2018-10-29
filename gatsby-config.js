@@ -26,5 +26,14 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        typeName: `ONEGRAPH`,
+        fieldName: `oneGraph`,
+        // onegraph endpoint
+        url: `https://serve.onegraph.com/dynamic?app_id=5c3f0589-a80f-4ade-93b1-da17412e24e3`,
+      },
+    },
   ],
 }
