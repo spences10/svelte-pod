@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Gatsby Default Starter'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -8,8 +8,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
@@ -23,8 +23,8 @@ module.exports = {
         theme_color: '#663399',
         display: 'minimal-ui',
         // This path is relative to the root of the site.
-        icon: 'src/images/gatsby-icon.png',
-      },
+        icon: 'src/images/gatsby-icon.png'
+      }
     },
     'gatsby-plugin-offline',
     {
@@ -33,8 +33,9 @@ module.exports = {
         typeName: `ONEGRAPH`,
         fieldName: `oneGraph`,
         // onegraph endpoint
-        url: `https://serve.onegraph.com/dynamic?app_id=5c3f0589-a80f-4ade-93b1-da17412e24e3`,
-      },
+        url: `https://serve.onegraph.com/dynamic?app_id=5c3f0589-a80f-4ade-93b1-da17412e24e3`
+      }
     },
-  ],
+    `gatsby-plugin-styled-components`
+  ]
 }
