@@ -57,10 +57,20 @@ export default IndexPage
 export const query = graphql`
   {
     oneGraph {
+      fsr: rss {
+        rss2Feed(url: "http://rss.simplecast.com/podcasts/279/rss") {
+          ...RSSFragment
+        }
+      }
       jsr: rss {
         rss2Feed(
           url: "https://www.heavybit.com/category/library/podcasts/jamstack-radio/feed/"
         ) {
+          ...RSSFragment
+        }
+      }
+      rp: rss {
+        rss2Feed(url: "http://rss.simplecast.com/podcasts/6265/rss") {
           ...RSSFragment
         }
       }
