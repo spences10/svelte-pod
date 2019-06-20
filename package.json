@@ -1,7 +1,7 @@
 {
   "name": "graph-pod-gatsby",
   "description": "RSS podcast player",
-  "version": "0.0.64",
+  "version": "0.0.65",
   "author": "Scott Spence <spences10apps@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "1.10.1",
@@ -18,7 +18,7 @@
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-helmet": "5.2.1",
-    "styled-components": "4.3.1"
+    "styled-components": "4.3.2"
   },
   "devDependencies": {
     "prettier": "1.18.2",
