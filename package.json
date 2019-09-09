@@ -1,14 +1,14 @@
 {
   "name": "graph-pod-gatsby",
   "description": "RSS podcast player",
-  "version": "0.0.122",
+  "version": "0.0.123",
   "author": "Scott Spence <spences10apps@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "1.10.6",
-    "gatsby": "2.15.9",
+    "gatsby": "2.15.11",
     "gatsby-image": "2.2.17",
-    "gatsby-plugin-manifest": "2.2.14",
-    "gatsby-plugin-offline": "3.0.3",
+    "gatsby-plugin-manifest": "2.2.15",
+    "gatsby-plugin-offline": "3.0.4",
     "gatsby-plugin-react-helmet": "3.1.6",
     "gatsby-plugin-sharp": "2.2.20",
     "gatsby-plugin-styled-components": "3.1.4",
