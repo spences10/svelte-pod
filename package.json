@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "prettier": "2.0.5",
-    "pretty-quick": "2.0.1"
+    "pretty-quick": "2.0.2"
   },
   "keywords": [
     "gatsby"
