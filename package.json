@@ -17,7 +17,7 @@
     "gatsby-transformer-sharp": "2.5.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-helmet": "6.0.0",
+    "react-helmet": "6.1.0",
     "styled-components": "4.4.1"
   },
   "devDependencies": {
