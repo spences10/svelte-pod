@@ -14,8 +14,14 @@
 </script>
 
 <script>
+  import { nowPlaying, setNowPlaying } from '../../stores/now-playing'
+
   export let podcast
   let { title, copyright, description, image, items } = podcast
+
+  const clickPodcastLink = url => {
+    setNowPlaying(url)
+  }
 </script>
 
 <!-- <pre>{JSON.stringify(podcast, null, 2)}</pre> -->
@@ -29,4 +35,12 @@
 {#each items as { title, link, enclosure: { url } }}
   <a href={link}>{title}</a>
   <p>{title}</p>
+  <button
+    on:click={() => {
+      clickPodcastLink(url)
+    }}>Play</button
+  >
+  <p>
+    {$nowPlaying}
+  </p>
 {/each}
