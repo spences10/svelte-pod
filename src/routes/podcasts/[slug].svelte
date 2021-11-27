@@ -1,4 +1,6 @@
 <script context="module">
+  export const prerender = true
+
   export const load = async ({ fetch, page: { params } }) => {
     const { slug } = params
     const res = await fetch(`/podcasts/${slug}.json`)
@@ -13,8 +15,18 @@
 
 <script>
   export let podcast
+  let { title, copyright, description, image, items } = podcast
 </script>
 
-<pre>{JSON.stringify(podcast, null, 2)}</pre>
+<!-- <pre>{JSON.stringify(podcast, null, 2)}</pre> -->
 
-<h2>Wheeeee</h2>
+<h2>{title}</h2>
+<small>{copyright}</small>
+<p>{@html description}</p>
+{#if image?.uri}
+  <img src={image.uri} alt={title} />
+{/if}
+{#each items as { title, link, enclosure: { url } }}
+  <a href={link}>{title}</a>
+  <p>{title}</p>
+{/each}
