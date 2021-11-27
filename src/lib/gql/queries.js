@@ -20,9 +20,9 @@ export const RSSFragment = gql`
 `
 
 export const queryPodcasts = gql`
-  query PodcastsQuery {
-    darknetDiaries: rss {
-      rss2Feed(url: "https://feeds.megaphone.fm/darknetdiaries") {
+  query PodcastsQuery($url: String!) {
+    rss {
+      rss2Feed(url: $url) {
         ...RSSFragment
       }
     }
