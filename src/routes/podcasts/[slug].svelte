@@ -36,6 +36,7 @@
   <a href={link}>{title}</a>
   <p>{title}</p>
   <button
+    class="btn"
     on:click={() => {
       clickPodcastLink(url)
     }}>Play</button
