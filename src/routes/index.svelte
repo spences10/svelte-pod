@@ -19,7 +19,9 @@
 {#each podcasts as { title }}
   <ul>
     <li>
-      <a href={`podcasts/${slugify(title, { lower: true })}`}
+      <a
+        sveltekit:prefetch
+        href={`/podcasts/${slugify(title, { lower: true })}`}
         >{title}</a
       >
     </li>

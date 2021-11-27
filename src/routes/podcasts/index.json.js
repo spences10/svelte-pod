@@ -1,5 +1,5 @@
 import { client } from '$lib/gql/graphql-client'
-import { queryPodcasts } from '$lib/gql/queries'
+import { queryPodcastsIndex } from '$lib/gql/queries'
 import { podList } from '$lib/podcasts'
 
 export const get = async () => {
@@ -9,7 +9,7 @@ export const get = async () => {
         const variables = { url: pod.url }
         const {
           rss: { rss2Feed },
-        } = await client.request(queryPodcasts, variables)
+        } = await client.request(queryPodcastsIndex, variables)
         return rss2Feed
       })
     )
