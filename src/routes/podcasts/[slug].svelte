@@ -14,6 +14,7 @@
 </script>
 
 <script>
+  import Modal from '$lib/components/modal.svelte'
   import { nowPlaying, setNowPlaying } from '../../stores/now-playing'
 
   export let podcast
@@ -22,26 +23,54 @@
   const clickPodcastLink = url => {
     setNowPlaying(url)
   }
+  let isModalOpen = false
 </script>
 
 <!-- <pre>{JSON.stringify(podcast, null, 2)}</pre> -->
 
-<h2>{title}</h2>
-<small>{copyright}</small>
-<p>{@html description}</p>
-{#if image?.uri}
-  <img src={image.uri} alt={title} />
-{/if}
-{#each items as { title, link, enclosure: { url } }}
-  <a href={link}>{title}</a>
-  <p>{title}</p>
-  <button
-    class="btn"
-    on:click={() => {
-      clickPodcastLink(url)
-    }}>Play</button
-  >
-  <p>
-    {$nowPlaying}
-  </p>
-{/each}
+<div class="container max-w-5xl mx-auto px-4">
+  <div class="flex mb-8">
+    <div class="h-52 w-52">
+      {#if image?.uri}
+        <img class="object-cover" src={image.uri} alt={title} />
+      {:else}
+        <img
+          class="object-cover"
+          src="https://api.lorem.space/image/fashion?w=500&h=500"
+          alt={`placeholder for ${title}`}
+        />
+      {/if}
+    </div>
+    <div class="prose pl-8">
+      <h1>{title}</h1>
+      <small>{copyright}</small>
+      <p>{@html description}</p>
+    </div>
+  </div>
+
+  {#each items as { title, link, pubDate, description, content, enclosure: { url, length } }}
+    <div class="prose">
+      <h2>{title}</h2>
+      <p>{new Date(pubDate)}</p>
+      <button on:click={() => (isModalOpen = !isModalOpen)}
+        >Open</button
+      >
+      <Modal bind:isModalOpen>
+        {#if content}
+          <p>{@html content}</p>
+        {:else}
+          <p>{description}</p>
+        {/if}
+        <button
+          class="btn"
+          on:click={() => {
+            clickPodcastLink(url)
+          }}>Play</button
+        >
+        <p>
+          {$nowPlaying}
+        </p>
+      </Modal>
+    </div>
+  {/each}
+</div>

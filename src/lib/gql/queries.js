@@ -11,6 +11,7 @@ export const RSSFragment = gql`
     items {
       title
       link
+      pubDate
       description
       content
       enclosure {
