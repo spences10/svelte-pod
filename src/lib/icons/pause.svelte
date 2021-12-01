@@ -1,11 +1,16 @@
+<script>
+  export let height = 50
+  export let width = 50
+</script>
+
 <svg
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   aria-hidden="true"
   role="img"
   class="iconify iconify--carbon"
-  width="32"
-  height="32"
+  {width}
+  {height}
   preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 32 32"
   ><path d="M14 10h-2v12h2V10z" fill="currentColor" /><path
