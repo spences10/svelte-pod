@@ -108,51 +108,63 @@
 
 <!-- https://www.youtube.com/watch?v=4rJ1F-tOk-M -->
 
-<section class="fixed bottom-0 left-0 right-0 bg-red-500 z-10">
-  {$nowPlaying}
+{$nowPlaying}
 
-  <div class="flex">
-    <div><button on:click={rewindAudio}><BackwardTen /></button></div>
-    <div>
-      <button on:click={playAudio}>
-        {#if isPlaying}
-          <Pause />
-        {:else}
-          <Play />
-        {/if}
-      </button>
+<section class="fixed bottom-0 left-0 right-0 bg-red-500 z-10 flex">
+  <div class="flex flex-col m-3">
+    <div class="flex col-span-1">
+      <div>
+        <button on:click={rewindAudio}><BackwardTen /></button>
+      </div>
+      <div>
+        <button on:click={playAudio}>
+          {#if isPlaying}
+            <Pause />
+          {:else}
+            <Play />
+          {/if}
+        </button>
+      </div>
+      <div>
+        <button on:click={forwardAudio}><ForwardTen /></button>
+      </div>
     </div>
-    <div><button on:click={forwardAudio}><ForwardTen /></button></div>
-  </div>
-  <!-- <audio src={url} controls /> -->
-  <div>
-    <span>0</span>
-    <input
-      type="range"
-      min="0"
-      max="100"
-      step="1"
-      bind:value={vol}
-      on:input={adjustVol}
-    />
-    <span>{vol}</span>
+
+    <div class="flex">
+      <span>0</span>
+      <input
+        type="range"
+        min="0"
+        max="100"
+        step="1"
+        bind:value={vol}
+        on:input={adjustVol}
+      />
+      <span>{vol}</span>
+    </div>
   </div>
 
-  <div>
-    <span>{currentTimeDisplay}</span>
-    <span>{totalTimeDisplay}</span>
+  <div class="flex w-full items-center">
+    <div class="mx-3">
+      <span>{totalTimeDisplay}</span>
+    </div>
+
+    <div
+      class="w-full h-3 flex items-center border border-dark-500 cursor-pointer"
+    >
+      <span class="h-3 bg-primary" style="width: {progress}%" />
+    </div>
+    <div class="mx-3">
+      <span>{currentTimeDisplay}</span>
+    </div>
   </div>
 
-  <div
-    class="w-full h-3 flex items-center border border-dark-500 cursor-pointer"
-  >
-    <span class="h-3 bg-primary" style="width: {progress}%" />
-  </div>
-
-  <div>
-    <button on:click={increasePlaybackRate}>+ Playback Rate</button>
-  </div>
-  <div>
-    <button on:click={decreasePlaybackRate}>- Playback Rate</button>
+  <div class="flex items-center">
+    <div>
+      <button on:click={increasePlaybackRate}>+ Playback Rate</button>
+    </div>
+    <div>
+      <button on:click={decreasePlaybackRate}>- Playback Rate</button>
+    </div>
   </div>
 </section>
