@@ -1,4 +1,8 @@
 <script>
+  import BackwardTen from '$lib/icons/backward-ten.svelte'
+  import ForwardTen from '$lib/icons/forward-ten.svelte'
+  import Pause from '$lib/icons/pause.svelte'
+  import Play from '$lib/icons/play.svelte'
   import { onDestroy, onMount } from 'svelte'
   import {
     nowPlaying,
@@ -104,15 +108,22 @@
 
 <!-- https://www.youtube.com/watch?v=4rJ1F-tOk-M -->
 
-<section class="fixed bottom-0 left-0 right-0 bg-red-500">
+<section class="fixed bottom-0 left-0 right-0 bg-red-500 z-10">
   {$nowPlaying}
-  <div><button on:click={rewindAudio}>Rewind</button></div>
-  <div>
-    <button on:click={playAudio}
-      >{isPlaying ? `Pause` : `Play`}</button
-    >
+
+  <div class="flex">
+    <div><button on:click={rewindAudio}><BackwardTen /></button></div>
+    <div>
+      <button on:click={playAudio}>
+        {#if isPlaying}
+          <Pause />
+        {:else}
+          <Play />
+        {/if}
+      </button>
+    </div>
+    <div><button on:click={forwardAudio}><ForwardTen /></button></div>
   </div>
-  <div><button on:click={forwardAudio}>Forward</button></div>
   <!-- <audio src={url} controls /> -->
   <div>
     <span>0</span>
