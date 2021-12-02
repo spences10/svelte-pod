@@ -1,12 +1,16 @@
 <script>
   import BackwardTen from '$lib/icons/backward-ten.svelte'
+  import Decrease from '$lib/icons/decrease.svelte'
   import ForwardTen from '$lib/icons/forward-ten.svelte'
+  import Increase from '$lib/icons/increase.svelte'
   import Pause from '$lib/icons/pause.svelte'
   import Play from '$lib/icons/play.svelte'
   import { onDestroy, onMount } from 'svelte'
   import {
     nowPlaying,
+    playbackRate,
     setCurrentTime,
+    setPlaybackRate,
   } from '../../stores/now-playing'
 
   export let url
@@ -98,21 +102,25 @@
   // increase playback rate
   const increasePlaybackRate = () => {
     audioFile.playbackRate += 0.1
+    setPlaybackRate(audioFile.playbackRate)
   }
 
   // decrease playback rate
   const decreasePlaybackRate = () => {
     audioFile.playbackRate -= 0.1
+    setPlaybackRate(audioFile.playbackRate)
   }
 </script>
 
 <!-- https://www.youtube.com/watch?v=4rJ1F-tOk-M -->
 
-{$nowPlaying}
+<p>
+  {$nowPlaying}
+</p>
 
-<section class="fixed bottom-0 left-0 right-0 bg-red-500 z-10 flex">
-  <div class="flex flex-col m-3">
-    <div class="flex col-span-1">
+<section class="flex bg-red-500 right-0 bottom-0 left-0 z-10 fixed">
+  <div class="flex flex-col m-3 justify-center">
+    <div class="flex">
       <div>
         <button on:click={rewindAudio}><BackwardTen /></button>
       </div>
@@ -150,21 +158,18 @@
     </div>
 
     <div
-      class="w-full h-3 flex items-center border border-dark-500 cursor-pointer"
+      class="border cursor-pointer flex border-dark-500 h-3 w-full items-center"
     >
-      <span class="h-3 bg-primary" style="width: {progress}%" />
+      <span class="bg-primary h-3" style="width: {progress}%" />
     </div>
     <div class="mx-3">
       <span>{currentTimeDisplay}</span>
     </div>
   </div>
 
-  <div class="flex items-center">
-    <div>
-      <button on:click={increasePlaybackRate}>+ Playback Rate</button>
-    </div>
-    <div>
-      <button on:click={decreasePlaybackRate}>- Playback Rate</button>
-    </div>
+  <div class="flex flex-col mx-4 justify-center items-center">
+    <button on:click={increasePlaybackRate}><Increase /></button>
+    <div class="my-0">{$playbackRate}</div>
+    <button on:click={decreasePlaybackRate}><Decrease /></button>
   </div>
 </section>
