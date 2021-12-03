@@ -1,17 +1,32 @@
 import { writable } from 'svelte/store'
 
-export const nowPlaying = writable(``)
-export const currentTime = writable(0)
-export const playbackRate = writable(1)
+const audio = writable(null)
+const nowPlaying = writable()
+const currentTime = writable(0)
+const playbackRate = writable(1)
 
-export const setNowPlaying = url => {
+const setAudio = audioObj => {
+  audio.set(audioObj)
+}
+
+const setNowPlaying = url => {
   nowPlaying.set(url)
 }
 
-export const setCurrentTime = time => {
+const setCurrentTime = time => {
   currentTime.set(time)
 }
 
-export const setPlaybackRate = rate => {
-  playbackRate.set(rate.toFixed())
+const setPlaybackRate = rate => {
+  playbackRate.set(rate.toFixed(1))
+}
+
+export {
+  setAudio,
+  nowPlaying,
+  currentTime,
+  playbackRate,
+  setNowPlaying,
+  setCurrentTime,
+  setPlaybackRate,
 }
