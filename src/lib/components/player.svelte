@@ -120,26 +120,20 @@
 
 <section class="flex bg-red-500 right-0 bottom-0 left-0 z-10 fixed">
   <div class="flex flex-col m-3 justify-center">
-    <div class="flex">
-      <div>
-        <button on:click={rewindAudio}><BackwardTen /></button>
-      </div>
-      <div>
-        <button on:click={playAudio}>
-          {#if isPlaying}
-            <Pause />
-          {:else}
-            <Play />
-          {/if}
-        </button>
-      </div>
-      <div>
-        <button on:click={forwardAudio}><ForwardTen /></button>
-      </div>
+    <div class="flex items-center">
+      <button on:click={rewindAudio}><BackwardTen /></button>
+      <button on:click={playAudio}>
+        {#if isPlaying}
+          <Pause />
+        {:else}
+          <Play />
+        {/if}
+      </button>
+      <button on:click={forwardAudio}><ForwardTen /></button>
     </div>
 
     <div class="flex">
-      <span>0</span>
+      <span class="mr-3">0</span>
       <input
         type="range"
         min="0"
@@ -148,7 +142,7 @@
         bind:value={vol}
         on:input={adjustVol}
       />
-      <span>{vol}</span>
+      <span class="ml-3">{vol}</span>
     </div>
   </div>
 
@@ -169,7 +163,7 @@
 
   <div class="flex flex-col mx-4 justify-center items-center">
     <button on:click={increasePlaybackRate}><Increase /></button>
-    <div class="my-0">{$playbackRate}</div>
+    <div class="my-0">{$playbackRate}x</div>
     <button on:click={decreasePlaybackRate}><Decrease /></button>
   </div>
 </section>
