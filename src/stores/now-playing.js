@@ -1,7 +1,9 @@
 import { writable } from 'svelte/store'
 
 const audio = writable(null)
-const nowPlaying = writable()
+const nowPlaying = writable(
+  `https://media.transistor.fm/d9b04961/a3ddb63a.mp3`
+)
 const currentTime = writable(0)
 const playbackRate = writable(1)
 

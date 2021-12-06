@@ -21,7 +21,7 @@
   let totalTrackTime
   let totalTimeDisplay = 'loading...'
   let currentTimeDisplay = '0:00:00'
-  let progress
+  let progress = 0
   let trackTimer
 
   onMount(() => {
@@ -34,7 +34,9 @@
   })
 
   const updateTime = () => {
-    progress = audioFile.currentTime * (100 / totalTrackTime)
+    audioFile.currentTime === null
+      ? (progress = 0)
+      : (progress = audioFile.currentTime * (100 / totalTrackTime))
 
     let currentHours = Math.floor(audioFile.currentTime / 60 / 60)
     let currentMinuets = Math.floor(audioFile.currentTime / 60)
