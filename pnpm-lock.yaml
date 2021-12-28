@@ -18,11 +18,11 @@ specifiers:
   slugify: ^1.6.3
   svelte: ^3.42.6
   svelte-preprocess: ^4.9.8
-  tailwindcss: 3.0.7
+  tailwindcss: 3.0.8
 
 devDependencies:
-  '@sveltejs/kit': 1.0.0-next.202_svelte@3.44.2
-  '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.7
+  '@sveltejs/kit': 1.0.0-next.206_svelte@3.44.2
+  '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.8
   autoprefixer: 10.4.0_postcss@8.4.4
   cssnano: 5.0.12_postcss@8.4.4
   daisyui: 1.16.2
@@ -38,7 +38,7 @@ devDependencies:
   slugify: 1.6.3
   svelte: 3.44.2
   svelte-preprocess: 4.9.8_4d00e6e9f7f5e449d97e7d1c5d5a9a9b
-  tailwindcss: 3.0.7_6b4e3d148bdcb715d5f821ed0a9c268b
+  tailwindcss: 3.0.8_6b4e3d148bdcb715d5f821ed0a9c268b
 
 packages:
 
@@ -92,14 +92,14 @@ packages:
       picomatch: 2.3.0
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.202_svelte@3.44.2:
-    resolution: {integrity: sha512-rXmJ0FplkWvD1CaeCfejRYhOJYrlmeUm5Fkw7gIKDdWPQev5rqOhd9B9ZvRpq35oMqCAwaOfK+e5S6k+83feEQ==}
+  /@sveltejs/kit/1.0.0-next.206_svelte@3.44.2:
+    resolution: {integrity: sha512-AQEOKZLG1GKkuBfWUKKxMs9A3AzE9tSHYc4Lu+AL/4BAs4erIFdOei2ldsxak2ICxxeaCloqVRPvIOtj7UEacg==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
       svelte: ^3.44.0
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.30_svelte@3.44.2+vite@2.7.2
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.32_svelte@3.44.2+vite@2.7.2
       cheap-watch: 1.0.4
       sade: 1.7.4
       svelte: 3.44.2
@@ -112,13 +112,13 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.0.0-next.30_svelte@3.44.2+vite@2.7.2:
-    resolution: {integrity: sha512-YQqdMxjL1VgSFk4/+IY3yLwuRRapPafPiZTiaGEq1psbJYSNYUWx9F1zMm32GMsnogg3zn99mGJOqe3ld3HZSg==}
+  /@sveltejs/vite-plugin-svelte/1.0.0-next.32_svelte@3.44.2+vite@2.7.2:
+    resolution: {integrity: sha512-Lhf5BxVylosHIW6U2s6WDQA39ycd+bXivC8gHsXCJeLzxoHj7Pv7XAOk25xRSXT4wHg9DWFMBQh2DFU0DxHZ2g==}
     engines: {node: ^14.13.1 || >= 16}
     peerDependencies:
       diff-match-patch: ^1.0.5
       svelte: ^3.44.0
-      vite: ^2.6.0
+      vite: ^2.7.0
     peerDependenciesMeta:
       diff-match-patch:
         optional: true
@@ -135,7 +135,7 @@ packages:
       - supports-color
     dev: true
 
-  /@tailwindcss/typography/0.5.0_tailwindcss@3.0.7:
+  /@tailwindcss/typography/0.5.0_tailwindcss@3.0.8:
     resolution: {integrity: sha512-1p/3C6C+JJziS/ghtG8ACYalbA2SyLJY27Pm33cVTlAoY6VQ7zfm2H64cPxUMBkVIlWXTtWHhZcZJPobMRmQAA==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || insiders'
@@ -144,7 +144,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
-      tailwindcss: 3.0.7_6b4e3d148bdcb715d5f821ed0a9c268b
+      tailwindcss: 3.0.8_6b4e3d148bdcb715d5f821ed0a9c268b
     dev: true
 
   /@trysound/sax/0.2.0:
@@ -1977,8 +1977,8 @@ packages:
       stable: 0.1.8
     dev: true
 
-  /tailwindcss/3.0.7_6b4e3d148bdcb715d5f821ed0a9c268b:
-    resolution: {integrity: sha512-rZdKNHtC64jcQncLoWOuCzj4lQDTAgLtgK3WmQS88tTdpHh9OwLqULTQxI3tw9AMJsqSpCKlmcjW/8CSnni6zQ==}
+  /tailwindcss/3.0.8_6b4e3d148bdcb715d5f821ed0a9c268b:
+    resolution: {integrity: sha512-Yww1eRYO1AxITJmW/KduZPxNvYdHuedeKwPju9Oakp7MdiixRi5xkpLhirsc81QCxHL0eoce6qKmxXwYGt4Cjw==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
