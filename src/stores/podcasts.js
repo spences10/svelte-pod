@@ -22,4 +22,4 @@ const getPodcasts = async () => {
   podcastsStore.set(podcasts)
 }
 
-await getPodcasts()
+getPodcasts()
