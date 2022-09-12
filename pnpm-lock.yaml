@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@sveltejs/adapter-vercel': 1.0.0-next.69
+  '@sveltejs/adapter-vercel': 1.0.0-next.73
   '@sveltejs/kit': next
   '@tailwindcss/typography': 0.5.4
   autoprefixer: 10.4.9
@@ -23,7 +23,7 @@ specifiers:
   vite: 3.1.0
 
 devDependencies:
-  '@sveltejs/adapter-vercel': 1.0.0-next.69
+  '@sveltejs/adapter-vercel': 1.0.0-next.73
   '@sveltejs/kit': 1.0.0-next.480_svelte@3.49.0+vite@3.1.0
   '@tailwindcss/typography': 0.5.4_tailwindcss@3.1.8
   autoprefixer: 10.4.9_postcss@8.4.16
@@ -114,8 +114,8 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sveltejs/adapter-vercel/1.0.0-next.69:
-    resolution: {integrity: sha512-E5mSkD3x3zYuJU5hPRmoqblrKZtEj2lRwhObnXf4OSFsMej2VUzoogbhaXHcVt57j0Ja5HgO07u7v9VUGOhi+w==}
+  /@sveltejs/adapter-vercel/1.0.0-next.73:
+    resolution: {integrity: sha512-wYm80tDSkwa9YfXHCHqMFMHmGYsQjVWj2oLbQdijQ2k8dnQPq908Pla3IES1cLwtT+fIMbZyh3Xly7mt06FwJg==}
     dependencies:
       '@vercel/nft': 0.22.0
       esbuild: 0.14.49
