@@ -9,7 +9,7 @@ specifiers:
   daisyui: 2.45.0
   env-cmd: 10.1.0
   graphql: 16.6.0
-  graphql-request: 5.0.0
+  graphql-request: 5.1.0
   husky: 8.0.2
   postcss: 8.4.20
   postcss-load-config: 4.0.1
@@ -31,7 +31,7 @@ devDependencies:
   daisyui: 2.45.0_r4gnkvssmvyxmi2wmat5xbx36a
   env-cmd: 10.1.0
   graphql: 16.6.0
-  graphql-request: 5.0.0_graphql@16.6.0
+  graphql-request: 5.1.0_graphql@16.6.0
   husky: 8.0.2
   postcss: 8.4.20
   postcss-load-config: 4.0.1_postcss@8.4.20
@@ -1388,8 +1388,8 @@ packages:
     resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==}
     dev: true
 
-  /graphql-request/5.0.0_graphql@16.6.0:
-    resolution: {integrity: sha512-SpVEnIo2J5k2+Zf76cUkdvIRaq5FMZvGQYnA4lUWYbc99m+fHh4CZYRRO/Ff4tCLQ613fzCm3SiDT64ubW5Gyw==}
+  /graphql-request/5.1.0_graphql@16.6.0:
+    resolution: {integrity: sha512-0OeRVYigVwIiXhNmqnPDt+JhMzsjinxHE7TVy3Lm6jUzav0guVcL0lfSbi6jVTRAxcbwgyr6yrZioSHxf9gHzw==}
     peerDependencies:
       graphql: 14 - 16
     dependencies:

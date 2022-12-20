@@ -23,7 +23,7 @@
     "daisyui": "2.45.0",
     "env-cmd": "10.1.0",
     "graphql": "16.6.0",
-    "graphql-request": "5.0.0",
+    "graphql-request": "5.1.0",
     "husky": "8.0.2",
     "postcss": "8.4.20",
     "postcss-load-config": "4.0.1",
